@@ -88,7 +88,7 @@ def main():
     lmp_dict = get_lmp_loc()
     df_lmp = pd.DataFrame.from_dict(lmp_dict)
     with open(lmp_csv,'w+') as f:    
-        df_lmp.to_csv(f, header=True, index=False)
+        df_lmp.to_csv(f, header=True, index=False, lineterminator='\n')
     csv_to_shp()
     print("Shapefile created")
 
